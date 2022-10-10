@@ -8,8 +8,7 @@ export const StatisticsSection = styled.section`
   margin-bottom: 30px;
 `;
 export const StatisticsTitle = styled.h2`
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding: 13px;
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;

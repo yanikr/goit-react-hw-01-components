@@ -8,8 +8,8 @@ import {
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ title, stats }) => { 
-    return     <StatisticsSection>
-        <StatisticsTitle>{title}</StatisticsTitle>
+    return <StatisticsSection>
+        {title && <StatisticsTitle>{title}</StatisticsTitle>}
         <StatisticsList>
             {stats.map((stat) => ( 
                 <StatisticsItem key={stat.id} style={{backgroundColor: getRandomHexColor()}}>
