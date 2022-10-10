@@ -5,6 +5,7 @@ export const StatisticsSection = styled.section`
   margin-left: auto;
   background-color: #fff;
   width: 270px;
+  margin-bottom: 30px;
 `;
 export const StatisticsTitle = styled.h2`
   padding-top: 22px;
