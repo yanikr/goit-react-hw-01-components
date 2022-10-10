@@ -10,15 +10,15 @@ import PropTypes from 'prop-types';
 export const Statistics = ({ title, stats }) => { 
     return <StatisticsSection>
         {title && <StatisticsTitle>{title}</StatisticsTitle>}
-        <StatisticsList>
-            {stats.map((stat) => ( 
-                <StatisticsItem key={stat.id} style={{backgroundColor: getRandomHexColor()}}>
-                    <StatisticsLabel>{ stat.label}</StatisticsLabel>
-                    <span>{ stat.percentage}%</span>
-                </StatisticsItem>
-            ))}
-        </StatisticsList>
-        </StatisticsSection>
+                <StatisticsList>
+                    {stats.map((stat) => ( 
+                        <StatisticsItem key={stat.id} style={{backgroundColor: getRandomHexColor()}}>
+                            <StatisticsLabel>{ stat.label}</StatisticsLabel>
+                            <span>{ stat.percentage}%</span>
+                        </StatisticsItem>
+                    ))}
+                </StatisticsList>
+            </StatisticsSection>
 }
 
 

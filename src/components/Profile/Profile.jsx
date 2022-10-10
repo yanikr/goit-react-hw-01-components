@@ -15,27 +15,27 @@ import {
 
 export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => { 
     return <ProfileContainer>
-        <DescriptionContainer>
-            <ProfileImage src={avatar} alt="User avatar" />
-        <ProfileUsername>{username}</ProfileUsername>
-        <ProfileDetails>@{tag}</ProfileDetails>
-        <ProfileDetails>{ location}</ProfileDetails>
-        </DescriptionContainer>
-        <StatsWrapper>
-        <StatsList>
-            <ListItem>
-                <ListItemText>Followers</ListItemText>
-                <ListItemNumber>{followers }</ListItemNumber>
-            </ListItem>
-            <ListItem>
-                <ListItemText>Views</ListItemText>
-                <ListItemNumber>{ views}</ListItemNumber>
-            </ListItem>
-            <ListItem>
-                <ListItemText>Likes</ListItemText>
-                <ListItemNumber>{ likes}</ListItemNumber>
-            </ListItem>
-            </StatsList>
+            <DescriptionContainer>
+                <ProfileImage src={avatar} alt="User avatar" />
+                <ProfileUsername>{username}</ProfileUsername>
+                <ProfileDetails>@{tag}</ProfileDetails>
+                <ProfileDetails>{ location}</ProfileDetails>
+            </DescriptionContainer>
+            <StatsWrapper>
+                <StatsList>
+                    <ListItem>
+                        <ListItemText>Followers</ListItemText>
+                        <ListItemNumber>{followers }</ListItemNumber>
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText>Views</ListItemText>
+                        <ListItemNumber>{ views}</ListItemNumber>
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText>Likes</ListItemText>
+                        <ListItemNumber>{ likes}</ListItemNumber>
+                    </ListItem>
+                </StatsList>
             </StatsWrapper>
     </ProfileContainer>
 }

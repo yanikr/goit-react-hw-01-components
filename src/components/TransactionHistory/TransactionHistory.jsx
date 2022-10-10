@@ -11,23 +11,23 @@ import PropTypes from 'prop-types';
 
 export const TransactionHistory = ({ items }) => { 
     return <TransactionHistoryTable>
-        <TableHead>
-            <TableHeadTr>
-                <TableHeadTh>Type</TableHeadTh>
-                <TableHeadTh>Amount</TableHeadTh>
-                <TableHeadTh>Currency</TableHeadTh>
-            </TableHeadTr>
-        </TableHead>
-        <TableBody>
-            {items.map((item) => ( 
-                <TableBodyTr key={item.id}>
-                    <TableBodyTh>{capitalizeFirstLowercaseRest(item.type)}</TableBodyTh>
-                    <TableBodyTh>{item.amount}</TableBodyTh>
-                    <TableBodyTh>{item.currency}</TableBodyTh>
-                </TableBodyTr> 
-            ))}
-        </TableBody>
-    </TransactionHistoryTable>
+                <TableHead>
+                    <TableHeadTr>
+                        <TableHeadTh>Type</TableHeadTh>
+                        <TableHeadTh>Amount</TableHeadTh>
+                        <TableHeadTh>Currency</TableHeadTh>
+                    </TableHeadTr>
+                </TableHead>
+                <TableBody>
+                    {items.map((item) => ( 
+                        <TableBodyTr key={item.id}>
+                            <TableBodyTh>{capitalizeFirstLowercaseRest(item.type)}</TableBodyTh>
+                            <TableBodyTh>{item.amount}</TableBodyTh>
+                            <TableBodyTh>{item.currency}</TableBodyTh>
+                        </TableBodyTr> 
+                    ))}
+                </TableBody>
+            </TransactionHistoryTable>
 }
 
 const capitalizeFirstLowercaseRest = str => {

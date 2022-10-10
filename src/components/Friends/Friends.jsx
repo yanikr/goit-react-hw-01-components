@@ -1,20 +1,17 @@
 import {
-    FriendsListUl,
-    FriendsListItem,
-    FriendsListImage,
-    FriendsListStatusOnline,
-    FriendsListStatusOffline
+    FriendsListUl
 } from "./Friends.styled";
 import PropTypes from 'prop-types';
+import { FriendListItemComp } from "./FriendListItem";
 
 export const FriendList = ({ friends }) => { 
     return <FriendsListUl>
         {friends.map((friend) => (
-            <FriendsListItem key={friend.id}>
-                {friend.isOnline ? <FriendsListStatusOnline/>: <FriendsListStatusOffline/> }
-                <FriendsListImage src={friend.avatar} alt={friend.name} />
-                <p>{ friend.name}</p>
-            </FriendsListItem>
+            <FriendListItemComp
+                key={friend.id}
+                avatar={friend.avatar}
+                isOnline={friend.isOnline}
+                name={ friend.name} />
         ))}
     </FriendsListUl>
 }
